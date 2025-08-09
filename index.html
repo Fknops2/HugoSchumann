@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://www.google.com/search?q=Rolex+Shop+By+Juwelier+Schumann+Bonn+Bad+Godesberg#lrd=0x47bee46df6690bc1:0xa8ba8a796c0653d5,3">
-  <title>Redirecting to Google Reviews…</title>
+  <title>Opening Google Reviews…</title>
+  <script>
+    const popup = "https://www.google.com/search?q=Rolex+Shop+By+Juwelier+Schumann+Bonn+Bad+Godesberg#lrd=0x47bee46df6690bc1:0xa8ba8a796c0653d5,3";
+    const write = "https://search.google.com/local/writereview?placeid=ChIJwZg99m3kvkcRyjHMzYWbnkU&hl=de";
+    let done = false;
+    function go(u){ try{ window.location.replace(u); done = true; }catch(e){} }
+    window.addEventListener('load', () => {
+      setTimeout(() => go(popup), 50);
+      setTimeout(() => { if(!done) go(write); }, 1200);
+    });
+  </script>
 </head>
 <body>
-  <p>Redirecting to Google Reviews… If nothing happens, <a href="https://www.google.com/search?q=Rolex+Shop+By+Juwelier+Schumann+Bonn+Bad+Godesberg#lrd=0x47bee46df6690bc1:0xa8ba8a796c0653d5,3">click here</a>.</p>
+  <p>Opening Google Reviews… If nothing happens, <a href="https://www.google.com/search?q=Rolex+Shop+By+Juwelier+Schumann+Bonn+Bad+Godesberg#lrd=0x47bee46df6690bc1:0xa8ba8a796c0653d5,3">tap here</a>.</p>
 </body>
 </html>
